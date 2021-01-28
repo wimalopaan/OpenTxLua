@@ -15,11 +15,16 @@ local input = {
 };
 
 local function run(v1, v2, v3, v4, v5)
-     serialWrite("$p0:v1\n");
-     serialWrite("$p1:v2\n");
-     serialWrite("$p2:v3\n");
-     serialWrite("$p3:v4\n");
-     serialWrite("$p4:v5\n");
+   v1 = v1 + 1024;
+   v2 = v2 + 1024;
+   v3 = v3 + 1024;
+   v4 = v4 + 1024;
+   v5 = v5 + 1024;
+   serialWrite("$p0:" .. v1 .. "\n");
+   serialWrite("$p1:" .. v2 .. "\n");
+   serialWrite("$p2:" .. v3 .. "\n");
+   serialWrite("$p3:" .. v4 .. "\n");
+   serialWrite("$p4:" .. v5 .. "\n");
 end
 
 return {input=input, run=run}
