@@ -6,6 +6,8 @@
 -- To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/ 
 -- or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
+npos0 = 0;
+
 local input = {
    {"Input", SOURCE},
    {"Top",    VALUE, 0, 100, 0},
@@ -17,14 +19,15 @@ local input = {
 local output = { "NPos" }
 
 local function run(source, top, bottom, steps, middle)
-   print(source);
+--   print(source);
    local delta = 2048 / (steps + middle);
    local lower = math.floor(steps / 2);
    local upper = steps + middle - lower;
    
    for i = 1,(steps + middle) do
       if (source <= (-1024 + i * delta)) then
-	 print(i);
+	    npos0 = 0;
+--	 print(i);
 	 if (( i > lower) and (i <= upper)) then
 	    return 0;
 	 end
