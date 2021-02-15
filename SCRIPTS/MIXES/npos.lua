@@ -26,7 +26,7 @@ local function run(source, top, bottom, steps, middle)
    
    for i = 1,(steps + middle) do
       if (source <= (-1024 + i * delta)) then
-	    npos0 = 0;
+	    npos0 = i;
 --	 print(i);
 	 if (( i > lower) and (i <= upper)) then
 	    return 0;

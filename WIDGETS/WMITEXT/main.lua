@@ -42,7 +42,7 @@ function refresh(pie)
    if (value > 0) and (value <= #valuestrings) then
       lcd.drawText(pie.zone.x + 40, pie.zone.y + 20, valuestrings[value], LEFT + SMLSIZE);
    else
-      lcd.drawText(pie.zone.x + 40, pie.zone.y + 20, value, LEFT + SMLSIZE);
+      lcd.drawNumber(pie.zone.x + 40, pie.zone.y + 20, value, LEFT + SMLSIZE);
    end
 end
 
