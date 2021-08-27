@@ -14,10 +14,7 @@ local input = {
    {"VSP", VALUE, 1, 2, 1}
 };
 
-Vsp11 = 0;
-Vsp12 = 0;
-Vsp21 = 0;
-Vsp22 = 0;
+local output = { "Vsp1", "Vsp2" };
 
 local function run(a, b, wa, wb, vsp)
    local ab = math.abs(a);
@@ -86,19 +83,12 @@ local function run(a, b, wa, wb, vsp)
    end
    rmax = math.sqrt(Amax * Amax + Bmax * Bmax);
 
-   if (vsp == 1) then
-      Vsp11 = (as * 1024) / rmax;
-      Vsp12 = (bs * 1024) / rmax;
-   else
-      Vsp21 = (as * 1024) / rmax;
-      Vsp22 = (bs * 1024) / rmax;
-   end
+   local Vsp1 = (as * 1024) / rmax;
+   local Vsp2 = (bs * 1024) / rmax;
 
---   local rr = math.sqrt(Vsp1 * Vsp1 + Vsp2 * Vsp2);
---   print(rmax, Vsp1, Vsp2, rr);
-
---   return 0;
+   return Csp1, Vsp2;
+   
 end
 
-return {input=input, run=run}
+return {input=input, run=run, output=output}
 

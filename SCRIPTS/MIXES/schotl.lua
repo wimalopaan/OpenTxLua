@@ -11,8 +11,10 @@ local input = {
    {"Eing 2", SOURCE},
 };
 
-SchottelDir = 0;
-SchottelPow = 0;
+local output = { "SchottPow", "SchottDir" };
+
+local SchottelDir = 0;
+local SchottelPow = 0;
 
 local function run(a, b)
    SchottelPow = math.sqrt(a * a + b * b) / 1.41;
@@ -21,7 +23,8 @@ local function run(a, b)
    else
       SchottelDir = 0;
    end
+   return SchottelPow, SchottelDir;
 end
 
-return {input=input, run=run}
+return {input=input, run=run, output=output}
 

@@ -33,7 +33,7 @@ local function update(pie, options)
   pie.options = options;
 end
 
-function refresh(pie)
+function refresh(pie, event)
    local value = getValue(pie.options.State);
    local new_value = value % 10;
    value = math.floor(value / 10);
