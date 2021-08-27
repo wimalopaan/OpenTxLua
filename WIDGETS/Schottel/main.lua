@@ -44,7 +44,7 @@ end
 function refresh(widget, event, touchState)
    local steer = getValue(widget.options.Steer);
    local throttle = getValue(widget.options.Throttle);
-   local actual = getValue(widget.options.Actual);
+   local actual = (getValue(widget.options.Actual) - 512) * 2;
 
    local number = widget.options.Number; 
    local side = number % 2;
