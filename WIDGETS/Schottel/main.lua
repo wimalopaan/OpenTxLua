@@ -46,17 +46,15 @@ function refresh(widget, event, touchState)
    local throttle = getValue(widget.options.Throttle);
    local actual = getValue(widget.options.Actual);
 
-   local number = getValue(widget.options.Number); 
+   local number = widget.options.Number; 
    local side = number % 2;
    
    lcd.clear();
 
-   local text = "Schottel: " .. number;
-   
    if (side == 0) then
-      lcd.drawText(widget.zone.x, widget.zone.y, text, LEFT + SMLSIZE);
+      lcd.drawText(widget.zone.x, widget.zone.y, "Schottel Links: " .. number, LEFT + SMLSIZE);
    else
-      lcd.drawText(widget.zone.x, widget.zone.y, text, RIGHT + SMLSIZE);
+      lcd.drawText(widget.zone.x + widget.zone.w, widget.zone.y, "Schottel Rechts: " .. number, RIGHT + SMLSIZE);
    end
 
    local rr = math.min(widget.zone.w / 2, widget.zone.h / 2) * 0.8;
