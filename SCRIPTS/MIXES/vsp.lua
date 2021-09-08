@@ -1,6 +1,6 @@
 --
 -- WM OTXE - OpenTX Extensions 
--- Copyright (C) 2020 Wilhelm Meier <wilhelm.wm.meier@googlemail.com>
+-- Copyright (C) 2020, 2021 Wilhelm Meier <wilhelm.wm.meier@googlemail.com>
 --
 -- This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
 -- To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/ 
@@ -14,7 +14,7 @@ local input = {
    {"VSP", VALUE, 1, 2, 1}
 };
 
-local output = { "Vsp1", "Vsp2" };
+local output = { "VspSrv1", "VspSrv2" };
 
 local function run(a, b, wa, wb, vsp)
    local ab = math.abs(a);
