@@ -1,20 +1,11 @@
----- #########################################################################
----- #                                                                       #
----- # Copyright (C) OpenTX                                                  #
------#                                                                       #
----- # License GPLv2: http://www.gnu.org/licenses/gpl-2.0.html               #
----- #                                                                       #
----- # This program is free software; you can redistribute it and/or modify  #
----- # it under the terms of the GNU General Public License version 2 as     #
----- # published by the Free Software Foundation.                            #
----- #                                                                       #
----- # This program is distributed in the hope that it will be useful        #
----- # but WITHOUT ANY WARRANTY; without even the implied warranty of        #
----- # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         #
----- # GNU General Public License for more details.                          #
----- #                                                                       #
----- #########################################################################
+--
+-- WM OTXE - OpenTX Extensions 
+-- Copyright (C) 2020 Wilhelm Meier <wilhelm.wm.meier@googlemail.com>
+--
 
+-- This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+-- To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/ 
+-- or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 local options = {
   { "Offset", VALUE, 0, 0, 49},
