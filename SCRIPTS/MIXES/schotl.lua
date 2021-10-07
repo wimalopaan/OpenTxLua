@@ -15,12 +15,12 @@ local input = {
    {"Timeout ms", VALUE, 1, 300, 100} -- milli secs
 };
 
-local output = { "SchottPow 1",
-		 "SchottDir 1",
-		 "SchottPow 2",
-		 "SchottDir 2",
-		 "State 1",
-		 "State 2"
+local output = { "Pow 1",
+		 "Dir 1",
+		 "Pow 2",
+		 "Dir 2",
+		 "State1",
+		 "State2"
 };
 
 local lastDirs = {
